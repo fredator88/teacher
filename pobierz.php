@@ -11,7 +11,9 @@ require_once('baza.php');
  
 /*Zapytanie typu SELECT - należy je czytać w następujacy sposób: 
 pobierz z tabeli o nazwie kraje kolumny: id i nazwa kraju*/
-$zapytanie_pobierz = "SELECT slowko_id, slowko_pl, slowko_ang FROM slowko WHERE aktualnie_wyswietlany = 1";
+/*$zapytanie_pobierz = "SELECT slowko_id, slowko_pl, slowko_ang FROM slowko WHERE aktualnie_wyswietlany = 1";*/
+$zapytanie_pobierz = "SELECT slowko_id, slowko_pl, slowko_ang FROM slowko WHERE czy_nauczone=0 ORDER BY ostatnio_wyswietlony, slowko_id LIMIT 1";
+
 /*Wykonanie zapytania SELECT*/
 
 $wynik_pobierz = mysqli_query($db, $zapytanie_pobierz);

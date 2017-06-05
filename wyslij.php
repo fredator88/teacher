@@ -1,5 +1,7 @@
 <?php
  
+header('Content-type: application/json; charset=utf-8'); 
+ 
 /*Załączenie pliku odpowiadającego za połączenie z bazą danych.*/
 require_once('baza.php');
  
